@@ -32,7 +32,7 @@ const PageDetailsProduct = ({ params }: PageProps) => {
   useEffect(() => {
     if (product) {
       if (product.options && product.options[0] && product.options[0].values) {
-        const sizes = product.options[0].values.map(option => option.value);
+        const sizes = product.options[0].values.map((option:any) => option.value);
         const uniqueSizes = Array.from(new Set(sizes));
         setUniqueSizes(uniqueSizes);
       }
