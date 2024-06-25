@@ -32,10 +32,11 @@ const PageDetailsProduct = ({ params }: PageProps) => {
   useEffect(() => {
     if (product) {
       if (product.options && product.options[0] && product.options[0].values) {
-        const sizes = product.options[0].values.map((option:any) => option.value);
+        const sizes: string[] = product.options[0].values.map((option: { value: string }) => option.value);
         const uniqueSizes = Array.from(new Set(sizes));
         setUniqueSizes(uniqueSizes);
       }
+
 
       if (product.options && product.options[1] && product.options[1].values) {
         const colors = product.options[1].values.map((option:any) => option.value);
