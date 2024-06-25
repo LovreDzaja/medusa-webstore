@@ -38,7 +38,7 @@ const PageDetailsProduct = ({ params }: PageProps) => {
       }
 
       if (product.options && product.options[1] && product.options[1].values) {
-        const colors = product.options[1].values.map(option => option.value);
+        const colors = product.options[1].values.map((option:any) => option.value);
         const uniqueColors = Array.from(new Set(colors));
         setUniqueColors(uniqueColors);
       }

@@ -57,7 +57,6 @@ const ProductList: React.FC = () => {
     return acc;
   }, []);
 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowProducts(true);
