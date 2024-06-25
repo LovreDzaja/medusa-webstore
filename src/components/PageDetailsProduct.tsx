@@ -37,9 +37,8 @@ const PageDetailsProduct = ({ params }: PageProps) => {
         setUniqueSizes(uniqueSizes);
       }
 
-
       if (product.options && product.options[1] && product.options[1].values) {
-        const colors = product.options[1].values.map((option:any) => option.value);
+        const colors: string[] = product.options[1].values.map((option: { value: string }) => option.value);
         const uniqueColors = Array.from(new Set(colors));
         setUniqueColors(uniqueColors);
       }
